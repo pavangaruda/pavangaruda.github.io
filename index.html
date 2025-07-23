@@ -1,186 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavan Kumar Garuda - Resume</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Calibri, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0;
-            color: #2c3e50;
-        }
-        h2 {
-            font-size: 1.5rem;
-            color: #3498db;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .contact-info {
-            font-weight: bold;
-            margin: 10px 0;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .stats-container {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-        }
-        .stat-box {
-            text-align: center;
-            padding: 15px;
-            width: 30%;
-            background-color: #f8f9fa;
-            border-radius: 5px;
-        }
-        .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #3498db;
-        }
-        .experience-item {
-            margin-bottom: 20px;
-        }
-        .job-title {
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-        .company {
-            font-style: italic;
-        }
-        .date {
-            color: #7f8c8d;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .highlight-box {
-            background-color: #e8f4fc;
-            padding: 15px;
-            border-left: 4px solid #3498db;
-            margin: 20px 0;
-        }
-        .two-column {
-            display: flex;
-            justify-content: space-between;
-        }
-        .column {
-            width: 48%;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pavan Kumar Garuda - Profile</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="header">
-        <h1>PAVAN KUMAR GARUDA</h1>
-        <h2>Lead Data & Analytics</h2>
-        <p>Scaling new heights of success with hard work & dedication and leaving a mark of excellence on every step; aiming for assignments which involve analytical capabilities and professional growth</p>
-        <div class="contact-info">
-            pavan.garuda@outlook.com | +91-6383116100
+    <header>
+        <nav>
+            <h1>Pavan Kumar Garuda</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="profile-card">
+        <div class="profile-photo">
+            <!-- Placeholder for photo -->
+            <img src="placeholder.jpg" alt="Profile picture" />
         </div>
-    </div>
-
-    <div class="section">
-        <h2>CORE COMPETENCIES</h2>
-        <ul>
-            <li>Strategic Planning & Implementation</li>
-            <li>Data Analysis & Data-driven Decision Making</li>
-            <li>Data Governance & Performance Monitoring</li>
-            <li>Data Visualization & Strong Communication</li>
-            <li>Team Building and Leadership</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>TECHNICAL SKILLS</h2>
-        <div class="two-column">
-            <div class="column">
-                <p><strong>Data Platforms:</strong> Microsoft Fabric, Azure Data Factory, SQL Server, Azure SQL DB</p>
-                <p><strong>Languages & Frameworks:</strong> DAX, M, Power Query, SQL, T-SQL</p>
-            </div>
-            <div class="column">
-                <p><strong>BI & Visualizations:</strong> Power BI (Desktop, Service, Mobile)</p>
-                <p><strong>Methodologies:</strong> Agile/Scrum, Data Mesh Architecture</p>
-            </div>
+        <div class="profile-summary">
+            <h2>Lead Data & Analytics</h2>
+            <p>Experienced data analytics and engineering leader with 14+ years of expertise in Microsoft technologies and business intelligence for BFSI clients.</p>
         </div>
-    </div>
-
-    <div class="section">
-        <h2>EXPERIENCE HIGHLIGHTS</h2>
-        <div class="stats-container">
-            <div class="stat-box">
-                <div class="stat-number">14+</div>
-                <div>Years Experience</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-number">30%</div>
-                <div>Efficiency Improved</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-number">40%</div>
-                <div>Faster Reporting</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>PROFESSIONAL EXPERIENCE</h2>
-        <div class="experience-item">
-            <div class="job-title">Lead Data & Analytics</div>
-            <div class="company">Tata Consultancy Services (TCS) | Jul'11-Present</div>
+    </section>
+    <section class="details-section">
+        <div class="technical-skills">
+            <h3>Technical Skills</h3>
             <ul>
-                <li>Spearheading end-to-end data analytics initiatives for global BFSI clients, leading a team of 15 professionals</li>
-                <li>Designing and deploying comprehensive data solutions leveraging Microsoft Fabric and Power BI</li>
-                <li>Developing interactive, insights-driven Power BI dashboards and reports for strategic decision-making</li>
-                <li>Leading data integration and transformation initiatives using advanced ETL methodologies</li>
-                <li>Establishing best practices for data governance, quality assurance, and compliance</li>
+                <li>Microsoft Fabric</li>
+                <li>Power BI (Desktop, Service, Mobile)</li>
+                <li>Azure Data Factory, SQL Server</li>
+                <li>DAX, M, Power Query</li>
+                <li>Agile Scrum Methodology</li>
+                <li>Certifications: DP-100, DP-900, DP-600, PL-300</li>
             </ul>
         </div>
-
-        <div class="highlight-box">
-            <h3>Key Achievement: Tenant-to-Tenant Power BI Migration</h3>
+        <div class="professional-experience">
+            <h3>Professional Experience</h3>
             <ul>
-                <li>Led a strategic migration for a major financial institution, ensuring seamless transition with minimal disruption</li>
-                <li>Conducted in-depth analysis of existing Fabric setup and built comprehensive inventory of data components</li>
-                <li>Successfully executed the entire migration in just 4 weeks using a strategic, phased approach</li>
+                <li>Lead Data & Analytics at TCS - Leading global BFSI analytics initiatives</li>
+                <li>Designed Power BI templates reducing development time by 40%</li>
+                <li>Automated reporting, saving 20+ hours/week of manual work</li>
+                <li>Senior Data Engineer and BI Developer roles with impact on revenue and process efficiency</li>
             </ul>
         </div>
-    </div>
-
-    <div class="section">
-        <h2>CERTIFICATIONS</h2>
-        <ul>
-            <li>Microsoft Certified: Azure Data Scientist Associate (DP-100) – Oct 2024</li>
-            <li>Microsoft Certified: Azure Data Fundamentals (DP-900) – Sep 2024</li>
-            <li>Microsoft Certified: Fabric Analytics Engineer Associate (DP-600) – Sep 2024</li>
-            <li>Microsoft Certified: Power BI Data Analyst Associate (PL-300) – Jan 2022</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>EDUCATION</h2>
-        <p><strong>MCA</strong><br>
-        Sri Venkateswara University, India</p>
-        
-        <p><strong>B.Sc. (Mathematics, Statistics, Computer Science)</strong><br>
-        Sri Venkateswara University, India</p>
-    </div>
+    </section>
+    <footer>
+        <p>Connect with me on <a href="https://linkedin.com/in/pavan-garuda" target="_blank">LinkedIn</a> | Email: example@email.com</p>
+    </footer>
 </body>
 </html>
