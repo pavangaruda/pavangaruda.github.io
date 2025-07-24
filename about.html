@@ -4,117 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Pavan Kumar Garuda</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* About page specific styles */
-        .profile-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            align-items: center;
-        }
-        
-        .profile-image {
-            flex: 0 0 250px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        
-        .profile-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        .profile-content {
-            flex: 1;
-            min-width: 300px;
-        }
-        
-        .about-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .detail-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        
-        .skills-section {
-            margin-bottom: 3rem;
-        }
-        
-        .skill-category {
-            margin-bottom: 2rem;
-        }
-        
-        .skill-bars {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .skill-item {
-            margin-bottom: 1rem;
-        }
-        
-        .skill-name {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 0.5rem;
-        }
-        
-        .skill-bar {
-            height: 8px;
-            background: #e0e0e0;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        
-        .skill-progress {
-            height: 100%;
-            background: #1a4b8c;
-            border-radius: 4px;
-        }
-        
-        .certifications {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .cert-card {
-            background: white;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .cert-icon {
-            font-size: 2rem;
-            color: #1a4b8c;
-        }
-        
-        .cert-info h4 {
-            margin: 0 0 0.5rem;
-        }
-        
-        .cert-info p {
-            margin: 0;
-            color: #666;
-            font-size: 0.9rem;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/styles.css">
+
 </head>
 <body>
     <header class="dashboard-header">
@@ -136,7 +27,7 @@
         <section class="profile-section">
             <div class="profile-image">
                 <!-- Replace with your actual photo -->
-                <img src="images/profile-photo.jpg" alt="Pavan Kumar Garuda">
+                <img src="/assets/Profile.png" alt="Pavan Kumar Garuda">
             </div>
             <div class="profile-content">
                 <h2>Professional Profile</h2>
@@ -202,10 +93,10 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>SQL Server</span>
-                            <span>92%</span>
+                            <span>80%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%"></div>
+                            <div class="skill-progress" style="width: 80%"></div>
                         </div>
                     </div>
                 </div>
@@ -235,10 +126,10 @@
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>SQL/T-SQL</span>
-                            <span>94%</span>
+                            <span>90%</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" style="width: 94%"></div>
+                            <div class="skill-progress" style="width: 90%"></div>
                         </div>
                     </div>
                 </div>
@@ -249,28 +140,28 @@
             <h2>Certifications</h2>
             <div class="certifications">
                 <div class="cert-card">
-                    <div class="cert-icon">📊</div>
+                    <div class="cert-icon"><img src="/assets/DP700.png" alt="DP-700" width="100" height="100"></div>
                     <div class="cert-info">
                         <h4>Azure Data Scientist Associate</h4>
-                        <p>DP-100 | Oct 2024</p>
+                        <p>DP-700 | May 2025</p>
                     </div>
                 </div>
                 <div class="cert-card">
-                    <div class="cert-icon">🔍</div>
+                    <div class="cert-icon"><img src="/assets/DP100.png" alt="DP-700" width="100" height="100"></div>
                     <div class="cert-info">
-                        <h4>Azure Data Fundamentals</h4>
-                        <p>DP-900 | Sep 2024</p>
+                        <h4>Azure Data Scientist</h4>
+                        <p>DP-100 | OCT 2024</p>
                     </div>
                 </div>
                 <div class="cert-card">
-                    <div class="cert-icon">🧩</div>
+                    <div class="cert-icon"><img src="/assets/DP600.png" alt="DP-600" width="100" height="100"></div>
                     <div class="cert-info">
                         <h4>Fabric Analytics Engineer</h4>
                         <p>DP-600 | Sep 2024</p>
                     </div>
                 </div>
                 <div class="cert-card">
-                    <div class="cert-icon">📈</div>
+                    <div class="cert-icon"><img src="/assets/PL300.png" alt="PL-300" width="100" height="100"></div>
                     <div class="cert-info">
                         <h4>Power BI Data Analyst</h4>
                         <p>PL-300 | Jan 2022</p>
