@@ -1,0 +1,373 @@
+/* style.css*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    background-image: linear-gradient(-60deg, rgba(13, 182, 13, 0.557) 10%,
+                                                rgba(3, 63, 13, 0.849));
+}
+
+.circles>* {
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.circle-one {
+    background-color: rgba(122, 133, 17, 0.801);
+    box-shadow: inset 25px 25px 40px rgba(0, 0, 0, 0.24),
+                  inset -25px -25px 40px rgba(255, 253, 253, 0.685);
+    bottom: 10%;
+    right: 20%;
+}
+
+.circle-two {
+    background-color: rgb(243, 208, 10);
+    box-shadow: inset 25px 25px 40px rgba(0, 0, 0, 0.24),
+                  inset -25px -25px 40px rgba(255, 253, 253, 0.685);
+    top: 20%;
+    left: 50%;
+}
+
+.circle-three {
+    background-color: rgba(214, 162, 198, 0.856);
+    box-shadow: inset 25px 25px 40px rgba(0, 0, 0, 0.24), 
+                  inset -25px -25px 40px rgba(255, 253, 253, 0.685);
+    bottom: 20%;
+    left: 20%;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+header p {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    padding: 2px;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.384);
+    backdrop-filter: blur(30px);
+}
+
+header p:hover {
+    background-color: white;
+    color: green;
+    transition: all .5s ease;
+}
+
+header img {
+    width: 50px;
+    margin: 1rem;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2vw;
+    margin-top: 10px;
+}
+
+nav li {
+    list-style: none;
+    background-color: rgba(12, 241, 69, 0.068);
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.226);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    cursor: pointer;
+}
+
+nav>li>a {
+    text-decoration: none;
+}
+
+@keyframes list-bg {
+    from {
+        background-color: rgba(183, 217, 196, 0.272);
+    }
+
+    to {
+        background-color: rgba(23, 85, 13, 0.444);
+    }
+}
+
+nav li:hover {
+    background-color: white;
+    color: green;
+    outline: 2px solid white;
+    outline-offset: 5px;
+    animation: none;
+    transition: all .3s ease;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.community {
+    font-size: 1.3rem;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(61, 235, 76, 0.815);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+.community:hover {
+    background-color: rgb(255, 255, 255);
+    outline: 2px solid green;
+    color: green;
+    transition: background-color .5s ease, color .5s ease;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search h1 {
+    font-size: 1.3rem;
+}
+
+.search label {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    border-radius: 10px;
+    outline: 2px solid green;
+    background-color: green;
+    backdrop-filter: blur(30px);
+    margin-top: 10px;
+    padding: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.search label:hover:not(:has(*:hover)) {
+    background-color: rgba(4, 54, 4, 0.863);
+    transition: all .5s ease;
+}
+
+.search input {
+    width: 400px;
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+}
+
+.search input:focus {
+    outline: none;
+    background-color: lightgreen;
+}
+
+.search input:hover {
+    background-color: lightgreen;
+    transition: .3s ease;
+}
+
+.search ol {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 10px;
+    font-size: .7rem;
+}
+
+.search li {
+    list-style: none;
+    padding: 10px;
+    color: white;
+    background-color: rgba(3, 124, 3, 0.253);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(30px);
+    border-radius: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.search li:hover {
+    outline: 1px solid white;
+    background-color: rgb(4, 83, 4);
+    transition: all .3s ease;
+}
+
+.options {
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    column-gap: 30px;
+}
+
+.options>* {
+    height: 230px;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.096);
+    border-radius: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(30px);
+    cursor: pointer;
+}
+
+.options>* h3 {
+    height: 50%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.options>*:hover {
+    box-shadow: inset -10px -10px 20px rgba(255, 255, 255, 0.158);
+}
+
+.read h3 {
+    background-color: salmon;
+}
+
+.practice h3 {
+    background-color: lightgreen;
+}
+
+.learn h3 {
+    background-color: skyblue;
+}
+
+.banner {
+    max-width: 800px;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(90deg, #17df4233 30%,
+                        rgba(255, 255, 255, 0.055) 50%, 
+                        rgba(0, 0, 0, 0.075) 50%);
+    backdrop-filter: blur(30px);
+    animation: banner-shadow 1s infinite alternate;
+    overflow: hidden;
+}
+
+@keyframes banner-shadow {
+    from {
+        box-shadow: 0 0 5px white;
+    }
+
+    to {
+        box-shadow: 0 0 15px white;
+    }
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    transform: translateX(50px) rotateZ(-30deg);
+}
+
+.banner div {
+    width: 50%;
+    font-size: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.banner div p {
+    margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+    nav {
+        row-gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .options {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .options>* {
+        width: 50vw;
+    }
+
+    .search input {
+        width: 50vw;
+    }
+
+    .banner {
+        width: 85vw;
+        height: 250px;
+        flex-direction: column;
+        justify-content: start;
+        background-image: linear-gradient(0deg, #17df4233 75%,
+                            rgba(255, 255, 255, 0.055) 50%, 
+                            rgba(0, 0, 0, 0.075) 50%);
+    }
+
+    .banner h1 {
+        align-self: center;
+        transform: none;
+    }
+
+    .banner div {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        font-size: 12px;
+    }
+
+    .options>* {
+        width: 60vw;
+        height: 200px;
+    }
+
+    .banner {
+        height: 200px;
+    }
+}

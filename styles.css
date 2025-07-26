@@ -51,9 +51,11 @@ body {
 }
 /*Glassmorphism Header */
 
-.banner {
-    /*max-width: 800px;
-    height: 270px;*/
+.banner_1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     gap: 2rem;
     padding: 3rem;
     display: flex;
@@ -64,6 +66,38 @@ body {
     border-right: 2px solid rgba(255, 255, 255, 0.5);
     background-image: linear-gradient(90deg, #17df4233 30%,
                         rgba(255, 255, 255, 0.055) 100%); /*, 
+                        rgba(0, 0, 0, 0.075) 95%);*/
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    backdrop-filter: blur(30px);
+    animation: banner-shadow 1s infinite alternate;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+@keyframes banner-shadow {
+    from {
+        box-shadow: 0 0 5px white;
+    }
+
+    to {
+        box-shadow: 0 0 15px white;
+    }
+}
+.banner_2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+    background-image: linear-gradient(90deg, #F5DEB3 30%,
+                        rgba(0, 0, 0, 0.075) 100%); /*, 
                         rgba(0, 0, 0, 0.075) 95%);*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -142,6 +176,11 @@ h1 {
         }
         
         .certifications {
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
             background: var(--light);
             padding: 2rem;
             border-radius: 8px;
@@ -320,13 +359,13 @@ nav a:hover {
 }
 
 .skill-category {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .skill-bars {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .skill-item {
@@ -354,20 +393,23 @@ nav a:hover {
 
 /* Certifications */
 .certifications {
-    display: grid;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;*/
 }
 
 .cert-card {
     background: white;
     border-radius: 8px;
-    padding: 1.5rem;
+    padding: 1rem;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .5rem;
     transition: transform 0.3s ease;
 }
 

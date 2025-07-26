@@ -1,191 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavan Kumar Garuda | Lead Data & Analytics Professional</title>
-    <style>
-        /* Modern, clean styling for your professional profile */
-        :root {
-            --primary: #1a4b8c;
-            --secondary: #0d2b4e;
-            --accent: #4fc3f7;
-            --light: #f8f9fa;
-            --dark: #333;
-            --gray: #666;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-        }
-        
-        .profile-header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .profile-header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(255,255,255,0.05)" d="M0,0 L100,0 L100,100 Q50,80 0,100 Z"></path></svg>');
-            background-size: 100% auto;
-            background-repeat: no-repeat;
-            background-position: bottom;
-        }
-        
-        .profile-title {
-            position: relative;
-            z-index: 2;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-        
-        .tagline {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            margin-bottom: 1.5rem;
-            font-weight: 300;
-        }
-        
-        .intro-container {
-            max-width: 1000px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-        }
-        
-        .intro-section {
-            background: white;
-            border-radius: 8px;
-            padding: 2.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            margin-bottom: 2rem;
-        }
-        
-        .intro-highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .highlight-card {
-            border-left: 4px solid var(--accent);
-            padding-left: 1.5rem;
-        }
-        
-        .highlight-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
-        }
-        
-        .highlight-card p {
-            color: var(--gray);
-        }
-        
-        .certifications {
-            background: var(--light);
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 2rem;
-        }
-        
-        .cert-badge {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .tagline {
-                font-size: 1.1rem;
-            }
-            
-            .intro-section {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Website</title>
+    <link rel="stylesheet" href="/css/glsStyle.css">
 </head>
+
 <body>
-    <header class="profile-header">
-        <div class="profile-title">
-            <h1>Pavan Kumar Garuda</h1>
-            <p class="tagline">Lead Data & Analytics Professional</p>
-            <p>Transforming raw data into strategic business value</p>
-        </div>
-    </header>
-    
-    <main class="intro-container">
-        <section class="intro-section">
-            <p>With 14+ years of experience architecting cutting-edge data solutions for global enterprises, I specialize in unlocking the hidden potential within complex data ecosystems. My expertise bridges the gap between technical innovation and business impact, delivering measurable results through:</p>
-            
-            <div class="intro-highlights">
-                <div class="highlight-card">
-                    <h3>Enterprise Analytics</h3>
-                    <p>Designed Power BI solutions that accelerated reporting by 40% while improving data accuracy</p>
-                </div>
-                
-                <div class="highlight-card">
-                    <h3>Cloud Data Platforms</h3>
-                    <p>Implemented Microsoft Fabric architectures that boosted processing efficiency by 30%</p>
-                </div>
-                
-                <div class="highlight-card">
-                    <h3>Data Leadership</h3>
-                    <p>Mentored teams to 100% certification success while managing $2M+ analytics portfolios</p>
-                </div>
+    <div class="circles">
+        <div class="circle-one"></div>
+        <div class="circle-two"></div>
+        <div class="circle-three"></div>
+    </div>
+    <header>
+        <p>
+            <img src="assets/DP100.png" 
+                 alt="GFG icon">
+            GeeksforGeeks
+        </p>
+        <h1>Glassmorphism</h1>
+    <main>
+        <section class="search">
+            <h1>Hello, What Do You Want To Learn?</h1>
+            <label for="search">
+              <input type="search">
+                  Search
+              </label>
+            <ol>
+                <li>Full Stack: Frontend and Backend</li>
+                <li>Applied Data Science</li>
+                <li>DSA: Basic to Advanced</li>
+            </ol>
+        </section>
+        <section class="options">
+            <div class="read">
+                <h3>Read</h3>
+                <p>
+                      Hi everyone! We are delighted to announce that
+                      due to the high demand for GeeksforGeeks Classrooms.
+                </p>
             </div>
-            
-            <p>As a Microsoft Certified expert, I combine deep technical mastery with a proven ability to:</p>
-            <ul style="margin: 1rem 0 1rem 2rem; color: var(--gray);">
-                <li style="margin-bottom: 0.5rem;">Translate business challenges into data-driven solutions</li>
-                <li style="margin-bottom: 0.5rem;">Build scalable analytics frameworks for Fortune 500 clients</li>
-                <li style="margin-bottom: 0.5rem;">Drive digital transformation in the BFSI sector</li>
-            </ul>
-            
-            <p>My passion lies in creating elegant solutions to complex data problems - whether migrating entire Power BI tenants without business disruption or uncovering $2.2M in cross-sell opportunities through advanced customer analytics.</p>
-            
-            <p>Currently leading a 15-member analytics team at Tata Consultancy Services, I thrive at the intersection of data strategy, technology implementation, and team development.</p>
-            
-            <div class="certifications">
-                <h3 style="color: var(--primary); margin-bottom: 1rem;">Microsoft Certifications:</h3>
-                <span class="cert-badge">Azure Data Scientist Associate (DP-100)</span>
-                <span class="cert-badge">Fabric Analytics Engineer (DP-600)</span>
-                <span class="cert-badge">Azure Data Fundamentals (DP-900)</span>
-                <span class="cert-badge">Power BI Data Analyst (PL-300)</span>
+            <div class="practice">
+                <h3>Practice</h3>
+                <p>
+                      Solve DSA Problems. Filter based on topic tags and
+                      company tags. Get curated problem lists by GFG.
+                </p>
+            </div>
+            <div class="learn">
+                <h3>Learn</h3>
+                <p>
+                      Most popular course on DSA trusted by over 75,000 
+                      students! Built with years of experience by industry.
+                  </p>
             </div>
         </section>
+        <section class="banner">
+            <h1>Challenge</h1>
+            <div>
+                <h3>
+                  Final Days to Save Money... Because 
+                  Three 90 Finale is Here!
+                  </h3>
+                <p>
+                  As we transition into the new phase, it's essential
+                  to fuel our inner drive for success. On popular
+                  demand, GeeksforGeeks is happy to announce an 
+                  extension of Three 90 Challenge.
+                  </p>
+            </div>
+
+        </section>
+
+        <div class="community">Explore Community</div>
     </main>
+
 </body>
+
 </html>
