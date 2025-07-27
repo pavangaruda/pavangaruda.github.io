@@ -13,22 +13,29 @@ body {
     padding: 0;
     margin: 0;
     /*background-image: url("/assets/background.png");*/
-    background-size: cover;         /* Makes the image cover the whole page */
-    background-repeat: no-repeat;   /* Prevents the image from repeating */
-    background-position: center;    /* Centers the image */
+    background-size: cover;
+    /* Makes the image cover the whole page */
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    background-position: center;
+    /* Centers the image */
 }
+
 /* Base styles for all shapes */
-.shapes > * {
+.shapes>* {
     position: fixed;
-    z-index: -1; /* Keeps shapes behind content */
+    z-index: -1;
+    /* Keeps shapes behind content */
 }
 
 /* ----- CIRCLES (original styles, now fixed) ----- */
-.circle-one, .circle-two, .circle-three {
+.circle-one,
+.circle-two,
+.circle-three {
     width: 15vw;
     height: 15vw;
     border-radius: 50%;
-    box-shadow: 
+    box-shadow:
         inset 25px 25px 40px rgba(0, 0, 0, 0.24),
         inset -25px -25px 40px rgba(255, 253, 253, 0.685);
 }
@@ -52,10 +59,11 @@ body {
 }
 
 /* ----- SQUARES ----- */
-.square-one, .square-two {
+.square-one,
+.square-two {
     width: 12vw;
     height: 12vw;
-    box-shadow: 
+    box-shadow:
         inset 20px 20px 30px rgba(0, 0, 0, 0.2),
         inset -20px -20px 30px rgba(255, 255, 255, 0.6);
 }
@@ -86,18 +94,28 @@ body {
 
 /* Optional: Add animation (like your original banner) */
 @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
-.shapes > * {
+.shapes>* {
     animation: float 6s ease-in-out infinite;
 }
 
-.shapes > *:nth-child(odd) {
-    animation-delay: 1s; /* Stagger animations */
+.shapes>*:nth-child(odd) {
+    animation-delay: 1s;
+    /* Stagger animations */
 }
+
 /*Glassmorphism Header */
 
 .banner_1 {
@@ -111,7 +129,8 @@ body {
     border-top: 2px solid rgba(255, 255, 255, 0.5);
     border-right: 2px solid rgba(255, 255, 255, 0.5);
     background-image: linear-gradient(90deg, #17df4233 30%,
-                        rgba(255, 255, 255, 0.055) 100%); /*, 
+            rgba(255, 255, 255, 0.055) 100%);
+    /*, 
                         rgba(0, 0, 0, 0.075) 95%);*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -120,6 +139,7 @@ body {
     overflow: hidden;
     margin-bottom: 1rem;
 }
+
 .banner-title {
     width: 10%;
     display: flex;
@@ -129,9 +149,12 @@ body {
     transform: rotate(270deg);
     transform-origin: center center;
     white-space: nowrap;
-    height: 100%; /* Ensure it takes full height of banner */
-    margin-right: -5%; /* Adjust this to fine-tune positioning */
+    height: 100%;
+    /* Ensure it takes full height of banner */
+    margin-right: -5%;
+    /* Adjust this to fine-tune positioning */
 }
+
 .banner-image {
     width: 20%;
     display: flex;
@@ -141,8 +164,10 @@ body {
 
     transform-origin: center center;
     white-space: nowrap;
-    height: 100%; /* Ensure it takes full height of banner */
-    margin-right: -5%; /* Adjust this to fine-tune positioning */
+    height: 100%;
+    /* Ensure it takes full height of banner */
+    margin-right: -5%;
+    /* Adjust this to fine-tune positioning */
 }
 
 
@@ -154,6 +179,7 @@ body {
     justify-content: center;
     gap: 2rem;
 }
+
 @keyframes banner-shadow {
     from {
         box-shadow: 0 0 5px white;
@@ -163,6 +189,7 @@ body {
         box-shadow: 0 0 15px white;
     }
 }
+
 .banner_2 {
     display: flex;
     flex-direction: row;
@@ -177,7 +204,8 @@ body {
     border-top: 2px solid rgba(255, 255, 255, 0.5);
     border-right: 2px solid rgba(255, 255, 255, 0.5);
     background-image: linear-gradient(90deg, #F5DEB3 30%,
-                        rgba(0, 0, 0, 0.075) 100%); /*, 
+            rgba(0, 0, 0, 0.075) 100%);
+    /*, 
                         rgba(0, 0, 0, 0.075) 95%);*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -186,6 +214,7 @@ body {
     overflow: hidden;
     margin-bottom: 1rem;
 }
+
 @keyframes banner-shadow {
     from {
         box-shadow: 0 0 5px white;
@@ -205,8 +234,9 @@ body {
     padding: 1.5rem 2rem;
     background: linear-gradient(135deg, #1a4b8c 0%, #0d2b4e 100%);
     color: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    min-height: 120px; /* Ensure consistent height */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    min-height: 120px;
+    /* Ensure consistent height */
 }
 
 .header-content {
@@ -234,8 +264,8 @@ body {
     max-height: 150px;
     border-radius: 4px;
     object-fit: cover;
-    border: 2px solid rgba(255,255,255,0.2);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Navigation adjustments to accommodate image */
@@ -269,9 +299,10 @@ body {
 @media (max-width: 768px) {
     .dashboard-header {
         flex-direction: column;
-        padding-bottom: 4rem; /* Extra space for image */
+        padding-bottom: 4rem;
+        /* Extra space for image */
     }
-    
+
     .profile-image-container {
         position: absolute;
         right: 1rem;
@@ -279,7 +310,7 @@ body {
         top: auto;
         height: 80px;
     }
-    
+
     .main-nav ul {
         justify-content: center;
     }
@@ -289,7 +320,7 @@ body {
     .profile-image-container {
         height: 60px;
     }
-    
+
     .main-nav ul {
         gap: 1rem;
     }
@@ -332,7 +363,7 @@ body {
     border-radius: 8px;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
 
@@ -361,7 +392,7 @@ body {
     background: white;
     border-radius: 8px;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
 
@@ -389,15 +420,15 @@ body {
     background: white;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-} 
- 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
 
 .profile-image {
     flex: 0 0 200px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .profile-image img {
@@ -416,13 +447,13 @@ body {
     background: white;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     margin-bottom: 1rem;
 }
 
 .skill-category {
     width: 60%;
-    
+
     margin-bottom: 1rem;
 }
 
@@ -461,7 +492,7 @@ body {
     background: white;
     border-radius: 8px;
     padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
     gap: .5rem;
@@ -473,14 +504,14 @@ body {
 }
 
 .cert-icon {
-    
+
     font-size: 0.5rem;
     color: #1a4b8c;
-    
+
 }
 
 .cert-info h4 {
-    
+
     text-align: center;
     text-wrap: nowrap;
     margin: 0 0 0.5rem;
@@ -501,7 +532,7 @@ body {
     padding: 2rem;
     background: white;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .timeline::after {
@@ -609,7 +640,7 @@ footer {
     height: auto;
     max-width: 600px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design */
@@ -617,12 +648,12 @@ footer {
     header {
         text-align: center;
     }
-    
+
     nav ul {
         justify-content: center;
         flex-wrap: wrap;
     }
-    
+
     .metrics-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -630,21 +661,22 @@ footer {
     .timeline::after {
         left: 31px;
     }
-    
+
     .timeline-item {
         width: 100%;
         padding-left: 70px;
         padding-right: 25px;
     }
-    
+
     .timeline-item::after {
         left: 21px;
     }
-    
-    .left::after, .right::after {
+
+    .left::after,
+    .right::after {
         left: 21px;
     }
-    
+
     .right {
         left: 0%;
     }
@@ -654,7 +686,7 @@ footer {
     .metrics-grid {
         grid-template-columns: 1fr;
     }
-    
+
     h1 {
         font-size: 1.8rem;
     }
