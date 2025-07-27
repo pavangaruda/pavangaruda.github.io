@@ -17,37 +17,86 @@ body {
     background-repeat: no-repeat;   /* Prevents the image from repeating */
     background-position: center;    /* Centers the image */
 }
-/* circle */
-.circles>* {
+/* Base styles for all shapes */
+.shapes > * {
+    position: fixed;
+    z-index: -1; /* Keeps shapes behind content */
+}
+
+/* ----- CIRCLES (original styles, now fixed) ----- */
+.circle-one, .circle-two, .circle-three {
     width: 15vw;
     height: 15vw;
-    position: absolute;
-    z-index: -1;
     border-radius: 50%;
+    box-shadow: 
+        inset 25px 25px 40px rgba(0, 0, 0, 0.24),
+        inset -25px -25px 40px rgba(255, 253, 253, 0.685);
 }
 
 .circle-one {
     background-color: rgba(122, 133, 17, 0.6);
-    box-shadow: inset 25px 25px 40px rgba(0, 0, 0, 0.24),
-                  inset -25px -25px 40px rgba(255, 253, 253, 0.685);
-    bottom: 10%;
+    bottom: 15%;
     right: 20%;
 }
 
 .circle-two {
-    background-color: rgb(243, 208, 10,0.6);
-    box-shadow: inset 25px 25px 40px rgba(0, 0, 0, 0.24),
-                  inset -25px -25px 40px rgba(255, 253, 253, 0.685);
+    background-color: rgba(214, 162, 198, 0.6);
     top: 20%;
     left: 50%;
 }
 
 .circle-three {
-    background-color: rgba(214, 162, 198, 0.6);
-    box-shadow: inset 25px 25px 40px rgba(0, 0, 0, 0.24), 
-                  inset -25px -25px 40px rgba(255, 253, 253, 0.685);
-    bottom: 20%;
-    left: 20%;
+    background-color: rgba(243, 208, 10, 0.5);
+    top: 30%;
+    left: 17%;
+}
+
+/* ----- SQUARES ----- */
+.square-one, .square-two {
+    width: 12vw;
+    height: 12vw;
+    box-shadow: 
+        inset 20px 20px 30px rgba(0, 0, 0, 0.2),
+        inset -20px -20px 30px rgba(255, 255, 255, 0.6);
+}
+
+.square-one {
+    background-color: rgba(50, 150, 250, 0.5);
+    top: 15%;
+    right: 10%;
+}
+
+.square-two {
+    background-color: rgba(250, 100, 150, 0.5);
+    bottom: 5%;
+    left: 15%;
+}
+
+/* ----- TRIANGLE ----- */
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 7vw solid transparent;
+    border-right: 7vw solid transparent;
+    border-bottom: 12vw solid rgba(150, 50, 200, 0.5);
+    bottom: 5%;
+    right: 5%;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.1));
+}
+
+/* Optional: Add animation (like your original banner) */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.shapes > * {
+    animation: float 6s ease-in-out infinite;
+}
+
+.shapes > *:nth-child(odd) {
+    animation-delay: 1s; /* Stagger animations */
 }
 /*Glassmorphism Header */
 
@@ -147,111 +196,63 @@ body {
     }
 }
 
-/* Header Styles */
-header {
+/* ===== HEADER WITH PROFILE IMAGE ===== */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    position: relative;
+    padding: 1.5rem 2rem;
     background: linear-gradient(135deg, #1a4b8c 0%, #0d2b4e 100%);
     color: white;
-    padding: 1.5rem 2rem;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    min-height: 120px; /* Ensure consistent height */
 }
 
 .header-content {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    justify-content: center;
+    flex-grow: 1;
 }
 
-h1 {
-    font-size: 1rem;
-    font-weight: 600;
+/* Profile Image Container */
+.profile-image-container {
+    position: absolute;
+    right: 2rem;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    z-index: 1;
 }
 
-.tagline {
-    font-size: 1.1rem;
-    opacity: 0.9;
+.profile-image-container img {
+    height: 100%;
+    width: auto;
+    max-height: 150px;
+    border-radius: 4px;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-.intro-container {
-            max-width: 1000px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-        }
-        
-        .intro-section {
-            background: white;
-            border-radius: 8px;
-            padding: 2.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            margin-bottom: 2rem;
-        }
-        
-        .intro-highlights {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        
-        .highlight-card {
-            border-left: 4px solid var(--accent);
-            padding-left: 1.5rem;
-        }
-        
-        .highlight-card h3 {
-            color: var(--primary);
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
-        }
-        
-        .highlight-card p {
-            color: var(--gray);
-        }
-        
-        .certifications {
-            display:flex;
-            flex-direction:inherit;
-            flex-wrap:nowrap;
-            gap: 1rem;
-            justify-content:space-evenly;
-            background: var(--light);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-        }
-        
-        .cert-badge {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .tagline {
-                font-size: 1.1rem;
-            }
-            
-            .intro-section {
-                padding: 1.5rem;
-            }
-        }
 
-/* Navigation */
-nav ul {
+/* Navigation adjustments to accommodate image */
+.main-nav {
+    margin-top: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.main-nav ul {
     display: flex;
     list-style: none;
     gap: 1.5rem;
-    margin-top: 1.5rem;
+    flex-wrap: wrap;
 }
 
-nav a {
+.main-nav a {
     color: white;
     text-decoration: none;
     font-weight: 500;
@@ -260,8 +261,38 @@ nav a {
     transition: border-color 0.3s ease;
 }
 
-nav a:hover {
+.main-nav a:hover {
     border-bottom: 2px solid #4fc3f7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        padding-bottom: 4rem; /* Extra space for image */
+    }
+    
+    .profile-image-container {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        top: auto;
+        height: 80px;
+    }
+    
+    .main-nav ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image-container {
+        height: 60px;
+    }
+    
+    .main-nav ul {
+        gap: 1rem;
+    }
 }
 
 /* Main Content */

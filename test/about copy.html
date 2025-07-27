@@ -8,16 +8,24 @@
 
 </head>
 <body>
-    <div class="circles">
+    <div class="shapes">
+        <!-- Circles -->
         <div class="circle-one"></div>
         <div class="circle-two"></div>
         <div class="circle-three"></div>
+        
+        <!-- Squares -->
+        <div class="square-one"></div>
+        <div class="square-two"></div>
+        
+        <!-- Triangle -->
+        <div class="triangle"></div>
     </div>
     <header class="dashboard-header">
-        <div class="header-content">
-            <h1>Pavan Kumar Garuda</h1>
-            <p class="tagline">Lead Data & Analytics Professional</p>
-        </div>
+    <div class="header-content">
+        <h1>Pavan Kumar Garuda</h1>
+        <p class="tagline">Lead Data & Analytics Professional</p>
+        
         <nav class="main-nav">
             <ul>
                 <li><a href="index.html">Dashboard</a></li>
@@ -26,7 +34,13 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-    </header>
+    </div>
+    
+    <!-- Add this right before closing header tag -->
+    <div class="profile-image-container">
+        <img src="/assets/Profile.png" alt="Pavan Kumar Garuda">
+    </div>
+</header>
 
     <main class="dashboard-container">
         <section class="banner_1">
@@ -200,5 +214,6 @@
     <footer>
         <p>© 2024 Pavan Kumar Garuda</p>
     </footer>
+<script src="js/shapes-animation.js"></script>
 </body>
 </html>
