@@ -122,16 +122,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 2rem;
-    padding: 3rem;
-    align-items: center;
+    align-items: center; /* Changed to stretch for equal height */
+    gap: 1rem; /* Reduced gap */
+    padding: 1.5rem;
     border-radius: 10px;
     border-top: 2px solid rgba(255, 255, 255, 0.5);
     border-right: 2px solid rgba(255, 255, 255, 0.5);
-    background-image: linear-gradient(90deg, #17df4233 30%,
-            rgba(255, 255, 255, 0.055) 100%);
-    /*, 
-                        rgba(0, 0, 0, 0.075) 95%);*/
+    background-image: linear-gradient(90deg, #17df4233 30%,rgba(255, 255, 255, 0.055) 100%);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     backdrop-filter: blur(30px);
@@ -139,47 +136,30 @@ body {
     overflow: hidden;
     margin-bottom: 1rem;
 }
-
+/* Banner title for skills section */
 .banner-title {
-    width: 10%;
+    width: 10%; /* Title takes 10% */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transform: rotate(270deg);
-    transform-origin: center center;
+    transform: none; /* Remove rotation for skills section */
+    position: relative; /* Remove absolute positioning */
+    top: auto;
+    left: auto;
     white-space: nowrap;
-    height: 100%;
-    /* Ensure it takes full height of banner */
-    margin-right: -5%;
-    /* Adjust this to fine-tune positioning */
+    margin: 0;
+    height: auto;
 }
 
-.banner-image {
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: Left;
-    justify-content: center;
-
-    transform-origin: center center;
-    white-space: nowrap;
-    height: 100%;
-    /* Ensure it takes full height of banner */
-    margin-right: -5%;
-    /* Adjust this to fine-tune positioning */
+.banner-title h2 {
+    margin: 0;
+    text-align: center;
+    writing-mode: vertical-rl; /* Vertical text */
+    text-orientation: mixed;
+    font-size: 1.2rem;
 }
-
-.banner-Cert {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-    justify-content:space-between;
-    gap: 1rem;
-    
-}
-
+/* Skills cards container */
 .banner-content {
     width: 90%;
     display: flex;
@@ -189,39 +169,258 @@ body {
     gap: 1rem;
 }
 
-@keyframes banner-shadow {
-    from {
-        box-shadow: 0 0 5px white;
-    }
+/* Skills cards container */
+.banner-skillCard {
+    width: 45%; /* Each card takes 45% */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
 
-    to {
-        box-shadow: 0 0 15px white;
+/* Skills section styling within cards */
+.banner-skillCard .skills-section {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-skillCard .skills-section h3 {
+    color: #1a4b8c;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.banner-skillCard .skill-category {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.banner-skillCard .skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.banner-skillCard .skill-item {
+    margin-bottom: 0.8rem;
+}
+
+.banner-skillCard .skill-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.banner-skillCard .skill-bar {
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.banner-skillCard .skill-progress {
+    height: 100%;
+    background: #1a4b8c;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+/* Mobile responsiveness for skills section */
+@media (max-width: 768px) {
+    .banner_2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .banner-title {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .banner-title h2 {
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        font-size: 1.5rem;
+    }
+    
+    .banner-skillCard {
+        width: 100%;
+        max-width: 400px;
     }
 }
+
+@media (max-width: 480px) {
+    .banner-skillCard .skills-section {
+        padding: 0.8rem;
+    }
+    
+    .banner-skillCard .skills-section h3 {
+        font-size: 1rem;
+    }
+    
+    .banner-skillCard .skill-name {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Updated banner_2 for Technical Skills section */
 
 .banner_2 {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
-    gap: 2rem;
-    padding: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: stretch; /* Changed to stretch for equal height */
+    gap: 1rem; /* Reduced gap */
+    padding: 1.5rem;
     border-radius: 10px;
     border-top: 2px solid rgba(255, 255, 255, 0.5);
     border-right: 2px solid rgba(255, 255, 255, 0.5);
-    background-image: linear-gradient(90deg, #F5DEB3 30%,
-            rgba(0, 0, 0, 0.075) 100%);
-    /*, 
-                        rgba(0, 0, 0, 0.075) 95%);*/
+    background-image: linear-gradient(90deg, #F5DEB3 30%, rgba(0, 0, 0, 0.075) 100%);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     backdrop-filter: blur(30px);
     animation: banner-shadow 1s infinite alternate;
     overflow: hidden;
     margin-bottom: 1rem;
+}
+
+/* Banner title for skills section */
+.banner-title {
+    width: 10%; /* Title takes 10% */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: none; /* Remove rotation for skills section */
+    position: relative; /* Remove absolute positioning */
+    top: auto;
+    left: auto;
+    white-space: nowrap;
+    margin: 0;
+    height: auto;
+}
+
+.banner-title h2 {
+    margin: 0;
+    text-align: center;
+    writing-mode: vertical-rl; /* Vertical text */
+    text-orientation: mixed;
+    font-size: 1.2rem;
+}
+
+/* Skills cards container */
+.banner-skillCard {
+    width: 45%; /* Each card takes 45% */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+/* Skills section styling within cards */
+.banner-skillCard .skills-section {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-skillCard .skills-section h3 {
+    color: #1a4b8c;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.banner-skillCard .skill-category {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.banner-skillCard .skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.banner-skillCard .skill-item {
+    margin-bottom: 0.8rem;
+}
+
+.banner-skillCard .skill-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.banner-skillCard .skill-bar {
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.banner-skillCard .skill-progress {
+    height: 100%;
+    background: #1a4b8c;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+/* Mobile responsiveness for skills section */
+@media (max-width: 768px) {
+    .banner_2 {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .banner-title {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .banner-title h2 {
+        writing-mode: horizontal-tb;
+        text-orientation: mixed;
+        font-size: 1.5rem;
+    }
+    
+    .banner-skillCard {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-skillCard .skills-section {
+        padding: 0.8rem;
+    }
+    
+    .banner-skillCard .skills-section h3 {
+        font-size: 1rem;
+    }
+    
+    .banner-skillCard .skill-name {
+        font-size: 0.8rem;
+    }
 }
 
 /* ===== HEADER WITH PROFILE IMAGE ===== */
@@ -380,13 +579,14 @@ body {
 
 /* Profile Section */
 .profile-section {
+
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 3rem;
     align-items: center;
     background: white;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
@@ -420,7 +620,7 @@ body {
 }
 
 .skill-category {
-    width: 60%;
+    width: 100%;
 
     margin-bottom: 1rem;
 }
